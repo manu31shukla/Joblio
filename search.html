@@ -3,42 +3,73 @@
 <head>
   <title>Study Monk - Candidate Search</title>
   <link rel="stylesheet" type="text/css" href="styles.css">
+  <link rel="stylesheet" type="text/css" href="search.css">
 </head>
 <body>
   <header>
-    <h1>Study Monk</h1>
+    <h1><a href="/">Study Monk</a></h1>
     <nav>
-      <!-- Navigation links -->
+      <a href="index.html">Home</a>
+      <a href="login.html">Login</a>
+      <a href="register.html">Register</a>
+      <a href="search.html" class="active">Search</a>
     </nav>
   </header>
   <section id="search-form">
     <h2>Search Candidates</h2>
     <form>
       <label for="location">Location:</label>
-      <input type="text" id="location" name="location">
-      
+      <div class="location-input">
+        <input type="text" id="location" name="location">
+        <button class="location-symbol" onclick="fetchLocation()">🌍</button>
+      </div>
+  
       <label for="job-role">Job Role:</label>
-      <input type="text" id="job-role" name="job-role">
-      
+      <div class="job-role-input">
+        <input type="text" id="job-role" name="job-role" placeholder="Select a job role">
+        <button class="job-role-arrow" onclick="toggleJobRoleOptions()">▼</button>
+      </div>
+      <ul class="job-role-options">
+        <li onclick="selectJobRole(this)"> Accounting apprentice</li>
+        <li onclick="selectJobRole(this)">Accountant: auditor</li>
+        <li onclick="selectJobRole(this)">Actor</li>
+        <li onclick="selectJobRole(this)">Aerospace engineer</li>
+        <li onclick="selectJobRole(this)">App developer</li>
+        <li onclick="selectJobRole(this)">Artist</li>
+        <li onclick="selectJobRole(this)">Architect</li>
+        <li onclick="selectJobRole(this)">Audiologist</li>
+        <li onclick="selectJobRole(this)">Barista</li>
+        <li onclick="selectJobRole(this)">Cabin crew</li>
+        <li onclick="selectJobRole(this)">Cameraman</li>
+        <li onclick="selectJobRole(this)">Carpentry</li>
+        <li onclick="selectJobRole(this)">CEO</li>
+        <li onclick="selectJobRole(this)">Chef</li>
+        <li onclick="selectJobRole(this)">Chemist</li>
+        <li onclick="selectJobRole(this)">Choreographer</li>
+        <li onclick="selectJobRole(this)">Cleaner</li>
+        <li onclick="selectJobRole(this)">Coder</li>
+        <li onclick="selectJobRole(this)">Comedian</li>
+        <li onclick="selectJobRole(this)">Dancer</li>
+        <li onclick="selectJobRole(this)">Developer</li>
+        <li onclick="selectJobRole(this)">Frontend Developer</li>
+        <li onclick="selectJobRole(this)">Backend Developer</li>
+        <li onclick="selectJobRole(this)">Full stack developer</li>
+        <li onclick="selectJobRole(this)">Singer</li>
+        <li onclick="selectJobRole(this)">SEO Assistant</li>
+        <li onclick="selectJobRole(this)">SEO Manager</li>
+        <li onclick="selectJobRole(this)">Radio Jockey</li>
+        <li onclick="selectJobRole(this)"></li>
+        <li onclick="selectJobRole('other')">Other</li>
+      </ul>
+  
       <button type="submit">Search</button>
     </form>
   </section>
-  <section id="search-results">
-    <h2>Search Results</h2>
-    <ul>
-      <li>
-        <h3>Candidate Name</h3>
-        <p>Location: City, Country</p>
-        <p>Job Role: Role</p>
-        <button class="evaluate-button">Evaluate</button>
-      </li>
-      <!-- More search results can be dynamically added here -->
-    </ul>
-  </section>
+  
   <footer>
     <p>&copy; 2023 Study Monk. All rights reserved.</p>
   </footer>
-  <script src="search.js"></script>
+  <script src="script.js"></script>
 
 </body>
 </html>
