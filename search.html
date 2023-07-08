@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Study Monk - Candidate Search</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Study Monk</h1>
+    <nav>
+      <!-- Navigation links -->
+    </nav>
+  </header>
+  <section id="search-form">
+    <h2>Search Candidates</h2>
+    <form>
+      <label for="location">Location:</label>
+      <input type="text" id="location" name="location">
+      
+      <label for="job-role">Job Role:</label>
+      <input type="text" id="job-role" name="job-role">
+      
+      <button type="submit">Search</button>
+    </form>
+  </section>
+  <section id="search-results">
+    <h2>Search Results</h2>
+    <ul>
+      <li>
+        <h3>Candidate Name</h3>
+        <p>Location: City, Country</p>
+        <p>Job Role: Role</p>
+        <button class="evaluate-button">Evaluate</button>
+      </li>
+      <!-- More search results can be dynamically added here -->
+    </ul>
+  </section>
+  <footer>
+    <p>&copy; 2023 Study Monk. All rights reserved.</p>
+  </footer>
+  <script src="search.js"></script>
+
+</body>
+</html>
