@@ -56,19 +56,11 @@ button[type="submit"]:hover {
 
 #search-results {
   margin-top: 40px;
+  
 }
 
 #search-results h2 {
   font-size: 24px;
-  margin-bottom: 20px;
-}
-
-ul {
-  list-style: none;
-  padding: 0;
-}
-
-li {
   margin-bottom: 20px;
 }
 
@@ -89,22 +81,81 @@ li {
 .location-input {
   display: flex;
   align-items: center;
+  padding: 20px;
+}
+.location{
+  padding: 20px;
 }
 
-.location-symbol {
+.job-role-input {
+  margin-bottom: 20px;
+}
+
+select {
+  flex: 1;
+  margin-right: 10px;
   background-color: #333;
   color: #fff;
-  padding: 8px;
+  border: 1px solid #fff;
+  width: 100%;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 4px;
+}
+
+select option {
+  background-color: #333;
+  color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+select option:hover {
+  background-color: #555;
+}
+
+
+.candidate-card {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 4px;
+}
+
+.evaluate-button {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
   border: none;
   border-radius: 4px;
   font-size: 16px;
   cursor: pointer;
 }
 
+.evaluate-button:hover {
+  background-color: #555;
+}
+
+.job-role-options {
+  display: none;
+  position: absolute;
+  background-color: #333;
+  color: #fff;
+  padding: 14px;
+  list-style: none;
+  margin: 0;
+  top: calc(100% + 5px);
+  left: 0;
+  width: 100%;
+  border-radius: 4px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
 .job-role-input {
   display: flex;
   align-items: center;
   position: relative;
+  margin-bottom: 20px;
 }
 
 .job-role-arrow {
@@ -117,32 +168,24 @@ li {
   cursor: pointer;
   position: absolute;
   right: 5px;
+  top: 50%;
+  transform: translateY(-79%);
 }
 
-.job-role-options {
-  display: none;
-  position: absolute;
+#search-results {
+  margin: 0 auto;
+  max-width: 400px;
+  text-align: center;
+}
+
+
+.location-symbol {
   background-color: #333;
   color: #fff;
-  padding: 10px;
-  list-style: none;
-  margin: 0;
-  top: 30px;
-  left: 0;
-  width: 100%;
+  padding: 8px;
+  border: none;
   border-radius: 4px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-}
-
-.job-role-options li {
+  font-size: 16px;
   cursor: pointer;
-  margin-bottom: 5px;
-}
-
-.job-role-options li:last-child {
-  margin-bottom: 0;
-}
-
-.job-role-options li:hover {
-  background-color: #555;
+  top: -8px;
 }
